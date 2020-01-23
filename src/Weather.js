@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios" ;
 import "./Weather.css";
+import DateComponent from "./DateComponent" ;
 
 export default function Weather(props){
     const [weatherData , setWeatherData] = useState({ ready: false });
@@ -11,7 +12,7 @@ export default function Weather(props){
             city: response.data.name,
             icon:"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
             description: response.data.weather[0].description,
-            date: "Thu 15.30"
+            date: new Date(response.data.dt * 1000)
 
         })
     
@@ -39,7 +40,7 @@ export default function Weather(props){
                     <li>
                         <strong>{weatherData.city}</strong>
                     </li>
-                    <li><small>Last updated at {weatherData.date}</small></li>
+                    <li><small><DateComponent date={weatherData.date}/></small></li>
                 </ul>
                 </div>
                 <div className="col">
