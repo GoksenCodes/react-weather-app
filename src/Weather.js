@@ -2,15 +2,24 @@ import React, { useState } from "react";
 import axios from "axios" ;
 import "./Weather.css";
 
-export default function Weather(){
-    const [ready, setReady] = useState(false)
-    const [temperature , setTemperature] = useState(null)
+export default function Weather(props){
+    const [weatherData , setWeatherData] = useState({ ready: false });
     function handleResponse(response) {
-        setTemperature(response.data.main.temp);
-        setReady(true);
+        setWeatherData({
+            ready: true ,
+            temperature: response.data.main.temp,
+            city: response.data.name,
+            icon:"https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+            description: response.data.weather[0].description,
+            date: "Thu 15.30"
+
+        })
+    
     }
 
-    if (ready) {
+
+
+    if (weatherData.ready) {
         return (
             <div className="Weather">
                 <h1>
@@ -28,18 +37,18 @@ export default function Weather(){
                     <div className="col searchresult-left">
                 <ul>
                     <li>
-                        <strong>New York</strong>
+                        <strong>{weatherData.city}</strong>
                     </li>
-                    <li><small>Last updated at Thu 10:38</small></li>
+                    <li><small>Last updated at {weatherData.date}</small></li>
                 </ul>
                 </div>
                 <div className="col">
                 <ul>
                     <li>
-                        <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="foggy"/>
+                        <img src={weatherData.icon} alt={weatherData.description}/>
                     </li>
                     <li> 
-                    <strong>{Math.round(temperature)}</strong>
+                    <strong>{Math.round(weatherData.temperature)}</strong>
                             <span><small>°C |°F</small></span></li>                
                 </ul>
                 </div>
@@ -54,7 +63,7 @@ export default function Weather(){
     } else {
     const apiKey = "683dab27e61c352cc6f11bcf41592476"
     let city = "New York"
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&apid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading..."
