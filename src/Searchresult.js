@@ -1,5 +1,6 @@
 import React from "react";
 import DateComponent from "./DateComponent" ;
+import WeatherIcon from "./WeatherIcon" ;
 
 
 export default function Searchresult(props) {
@@ -18,7 +19,8 @@ export default function Searchresult(props) {
                 <div className="col">
                 <ul>
                     <li>
-                        <img src={props.data.icon} alt={props.data.description}/>
+                        <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+                        {/* <img src={props.data.icon} alt={props.data.description}/> */}
                     </li>
                     <li> 
                     <strong>{Math.round(props.data.temperature)}</strong>
