@@ -25,7 +25,7 @@ export default function TempUnit(props){
         return (
             <div>
             <strong>{Math.round(fahrenheit)}</strong>
-                                <span><a href="/" onClick={convertToC}>°C </a>| °F</span>
+                                <span><small><a href="/" onClick={convertToC}>°C </a>| °F</small></span>
                                 </div>
         ) ;
         
