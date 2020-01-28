@@ -7,14 +7,16 @@ export default function DateComponent(props) {
     let hours = props.date.getHours();
     let minutes = props.date.getMinutes();
 
-    // if (minutes < 10) {
-    //     minutes = `0${minutes}` ;
-    // }
+    if (minutes < 10) {
+        minutes = `0${minutes}` ;
+    }
 
 
 
     return <div>
-      Last updated at {hours} : {minutes}
+      <div className="icon">
+     Last updated at {day} {hours} : {minutes}
+     </div>
     </div>;
 
 }

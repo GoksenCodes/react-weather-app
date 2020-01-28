@@ -46,17 +46,18 @@ export default function Weather(props){
     if (weatherData.ready) {
         return (
             <div className="Weather">
-                <h1>
+                <h2>
             How is the weather today?
-          </h1>
+          </h2>
                 <div className="search-section">
                 <form onSubmit={handleSubmit}> 
-                    <input type="search" placeholder="Enter a city" className="form-control search-box" autoFocus="on" onChange={handleInput}/>
-                    <input type="submit" value="Search" className="button"/>
+                    <input type="search" placeholder="Enter a city and press enter" className="form-control search-box" autoFocus="on" onChange={handleInput}/>
+                    
     
                 </form>
                 </div>
                 <Searchresult data={weatherData}/>
+                <p><small>No matter how the weather is, let your day be beautiful 💜</small></p>
                 
             </div>
     

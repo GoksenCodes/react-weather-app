@@ -8,8 +8,7 @@ export default function Searchresult(props) {
 
     return(
         <div className="searchresult-section">
-                <div className="row">
-                    <div className="col searchresult-left">
+                    <div className="searched-city">
                 <ul>
                     <li>
                         <strong>{props.data.city}</strong>
@@ -17,16 +16,14 @@ export default function Searchresult(props) {
                     <li><small><DateComponent date={props.data.date}/></small></li>
                 </ul>
                 </div>
+                <div className="row">
+                <div className="col temp">
+                    <TempUnit celsius={props.data.temperature}/>
+                      
+                </div>
                 <div className="col">
-                <ul>
-                    <li>
-                        <WeatherIcon code={props.data.icon} alt={props.data.description}/>
-                        {/* <img src={props.data.icon} alt={props.data.description}/> */}
-                    </li>
-                    <li> 
-                        <TempUnit celsius={props.data.temperature}/>
-                    </li>                
-                </ul>
+                <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+                        {/* <img src={props.data.icon} alt={props.data.description}/> */}  
                 </div>
                 </div>
                 </div>
