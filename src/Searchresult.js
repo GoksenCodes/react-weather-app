@@ -1,6 +1,7 @@
 import React from "react";
 import DateComponent from "./DateComponent" ;
 import WeatherIcon from "./WeatherIcon" ;
+import TempUnit from "./TempUnit" ;
 
 
 export default function Searchresult(props) {
@@ -23,8 +24,8 @@ export default function Searchresult(props) {
                         {/* <img src={props.data.icon} alt={props.data.description}/> */}
                     </li>
                     <li> 
-                    <strong>{Math.round(props.data.temperature)}</strong>
-                            <span><small>°C |°F</small></span></li>                
+                        <TempUnit celsius={props.data.temperature}/>
+                    </li>                
                 </ul>
                 </div>
                 </div>

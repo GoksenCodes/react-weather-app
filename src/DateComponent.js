@@ -14,7 +14,7 @@ export default function DateComponent(props) {
 
 
     return <div>
-        {day} {hours} : {minutes}
+      Last updated at {hours} : {minutes}
     </div>;
 
 }
