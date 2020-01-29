@@ -12,10 +12,33 @@ export default function TempUnit(props){
         event.preventDefault();
         setUnit("celsius");
 
-        }
+    }
+    // return (
+    //     <div>
+    //         <strong>
+    //             {console.log(props.celsius)}
+            
+                
+    //             {unit === "celcius" ? (
+    //                 Math.round(Number(props.celsius))
+    //             ):(
+    //                 Math.round(Number(props.fahrenheit))
+    //             )}
+    //         </strong>
+    //         <span>
+    //             {unit === "celcius" ? (
+    //                 <small> °C | <a href="/" onClick={convertToF}>°F</a></small>
+    //             ):(
+    //                 <small><a href="/" onClick={convertToC}>°C </a>| °F</small>
+    //             )}
+    //         </span>
+    //     </div>
+    // )
+    
+    
     if(unit === "celsius") {
     return(
-        <div>
+        <div className="temp-container">
         <strong>{Math.round(props.celsius)}</strong>
                             <span><small> °C | <a href="/" onClick={convertToF}>°F</a></small></span>
                             </div>
@@ -23,7 +46,7 @@ export default function TempUnit(props){
     } else {
         let fahrenheit = (props.celsius * 9/5) + 32 ;
         return (
-            <div>
+            <div className="temp-container">
             <strong>{Math.round(fahrenheit)}</strong>
                                 <span><small><a href="/" onClick={convertToC}>°C </a>| °F</small></span>
                                 </div>

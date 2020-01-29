@@ -9,8 +9,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        
-      <Weather defaultCity="Amsterdam"/>
+
+      <Weather defaultCity=""/>
       <footer>
         <a href="https://github.com/GoksenCodes/weather-react" target="_blank">Open-source code</a>
         {" "} by Goksen Gorgulu
