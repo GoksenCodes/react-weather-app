@@ -1,8 +1,13 @@
+@media screen and (min-width: 415px) {
+  .site-container {
+    flex-direction: row;
+  }
+}
 .App {
-    max-width: 800px;
-    margin: 30px auto;
+  max-width: 800px;
+  margin: 30px auto;
 }
 .App footer {
-    font-size: 12px;
-    margin: 0px ;
+  font-size: 12px;
+  margin: 0px;
 }

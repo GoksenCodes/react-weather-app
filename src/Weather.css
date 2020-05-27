@@ -1,82 +1,72 @@
 .Weather {
-    color: #505050;
-    text-align: center;
-    border: 1px solid #dadde1 ;
-    padding: 16px ;
-    margin: 10px auto;
-    border-radius: 8px;
-    color: #0f4c75 ;
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  color: #505050;
+  text-align: center;
+  border: 1px solid #dadde1;
+  padding: 16px;
+  margin: 10px auto;
+  border-radius: 8px;
+  color: #0f4c75;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 
 h2 {
-    margin-bottom: 1.5rem ;
+  margin-bottom: 1.5rem;
 }
 p {
-    color: #3282b8;
+  color: #3282b8;
 }
 
+ul {
+  padding-inline-start: 0px;
+}
 
 .Weather input {
-    margin-bottom: 10px;
-    color: slategray;
-    border-radius: 5px;
+  margin-bottom: 10px;
+  color: slategray;
+  border-radius: 5px;
 }
 
-
 .search-box {
-    width: 400px;
-    display: inline;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
-    padding: 2px
+  display: inline;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+  padding: 2px;
 }
 
 .search-section {
-    text-align: center;
-    padding: 40px 0 60 0px;
+  text-align: center;
+  padding: 40px 0 60 0px;
 }
 
 .searchresult-section {
-    padding: 40px 100px;
-    font-size: 34px;
-    /* display: none; */
+  padding: 20px 50px;
+  font-size: 34px;
+  /* display: none; */
 }
 
 .Weather li {
-    list-style: none; 
+  list-style: none;
 }
 
 .searched-city {
-    padding: 10px 0;;
-    font-size: 18px ;
-    margin-bottom: 30px;
-
-
+  /* padding: 10px 0; */
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 .temp {
-    text-align: center ;
-    margin-left: 110px;
+  text-align: center;
 }
 
 .Weather canvas {
-    margin-right: 100px;
-    display: inline-block;
-
+  display: inline-block;
 }
 
 .button {
-    padding-top:2px;
-    margin-left: 5px ;
-
+  padding-top: 2px;
+  margin-left: 5px;
 }
 
 .temp-container {
-    padding-top: 5px;
-
+  padding-top: 5px;
 }
-
-
-
-
